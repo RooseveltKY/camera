@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <script src= "p5.min.js"></script>
+    <script src= "p5.dom.min.js"></script>
+  </head>
+  <body>
+    <script>
+      var capture;
+      
+      function setup() {
+        capture= createCapture(VIDEO);
+        capture.size(0,0);//The first video box is set to the size 0, 0
+      }
+      
+      function draw() {
+        background(255);
+        //Color of the background
+        tint(255,255,255);
+        //Color of the tint- 255,255,255 means all the colors
+        
+        image(capture, 0, 0, 500, 500);
+        //Location of the second box is at (0,0)
+        //500 is how big the second video box is going to be
+      }
+    </script>
+  </body>
+</html>
